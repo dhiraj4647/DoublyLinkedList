@@ -1,8 +1,8 @@
 #include<stdio.h>
 #define size 5
 int deque[size] , front=-1 , rear=-1 ;
-void insertFront(int);
-void insertRear(int);
+void insertFront();
+void insertRear();
 void deleteFront(void);
 void deleteRear(void);
 void display(void);
@@ -24,11 +24,7 @@ void main()
 		printf("Enter your choice : ");
 		scanf("%d", &choice);
 
-		if(choice==1 || choice==2)
-		{
-			printf("Enter element to insert : ");
-			scanf("%d", &ele);
-		}
+		
 
 		switch(choice)
 		{
@@ -52,11 +48,13 @@ void main()
 		}
 	}
 }
-void insertFront(int data){
-if(isOverflow()){
+void insertFront(){
+if(isOverflow()){int data;
       printf("Queue is Full\n");
       return 0;
 }
+printf("Enter the element");
+scanf("%d",&data);
 if(front==-1){
       front=rear=0;
 
@@ -71,11 +69,13 @@ deque[front]=data;
 }
 
 
-void insertRear(int data){
+void insertRear(){int data;
 if(isOverflow()){
       printf("Queue is Full\n");
       return 0;
 }
+printf("Enter the element");
+scanf("%d",&data);
 if(rear==-1){
       rear=0;
 }
