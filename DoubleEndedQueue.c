@@ -1,3 +1,4 @@
+//Double EndedQueue does not follow FIFO rule
 #include<stdio.h>
 #define size 5
 int deque[size] , front=-1 , rear=-1 ;
